@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Kotlin Pcap</string>
+
+    <!-- Login -->
+    <string name="password">Input Password</string>
+    <string name="userid">Input User ID</string>
+    <string name="Log_in">Login</string>
+
+    <!-- Home -->
+    <string name="credentials_caption">Your registered credentials:</string>
+    <string name="empty_credentials">You don\'t have any credentials.</string>
+    <string name="reauth">Reauth</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="delete">Delete</string>
+    <string name="delete_confirmation">Are you sure you want to delete this credential?\n\n%s</string>
+
+    <!-- Wifi -->
+    <string name="wifilist_caption">Wifi List</string>
+    <string name="empty_wifilist">Can\'t find any Wifi</string>
 </resources>

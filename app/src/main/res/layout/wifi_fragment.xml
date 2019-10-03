@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.kotlinpcap.ViewModel.WifiViewmodel" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_medium"
+                android:gravity="center"
+                android:text="@{@string/welcome(viewModel.currentUsername)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Welcome, John!" />
+
+            <TextView
+                android:id="@+id/wifi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_medium"
+                android:labelFor="@id/wifilist"
+                android:text="@string/wifilist_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wifilist"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/spacing_medium"
+                android:paddingBottom="@dimen/dodge_app_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wifi"
+                tools:listitem="@layout/wifi_item" />
+
+            <TextView
+                android:id="@+id/empty_wifilist"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/spacing_large"
+                android:text="@string/empty_wifilist"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/wifilist"
+                app:layout_constraintEnd_toEndOf="@id/wifilist"
+                app:layout_constraintStart_toStartOf="@id/wifilist"
+                app:layout_constraintTop_toTopOf="@id/wifilist" />
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/processing"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

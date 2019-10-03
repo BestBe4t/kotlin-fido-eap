@@ -6,6 +6,8 @@ import com.example.kotlinpcap.Auth.AuthRepository
 
 class MainViewModel(application: Application) : AndroidViewModel(application){
 
-    private val repository = AuthRepository
+    private val repository = AuthRepository.getInstance(application)
+
+    val State = repository.getState()
 
 }
