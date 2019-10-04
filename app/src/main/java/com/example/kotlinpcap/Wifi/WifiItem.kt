@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.kotlinpcap.ViewModel
+package com.example.kotlinpcap.Wifi
 
 /**
  * A credential registered on the server.

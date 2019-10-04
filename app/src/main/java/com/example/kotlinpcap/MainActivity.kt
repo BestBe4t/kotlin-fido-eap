@@ -8,7 +8,6 @@ import androidx.fragment.app.commit
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.kotlinpcap.Auth.State
-import androidx.fragment.app.transaction
 import com.example.kotlinpcap.UI.LoginFragment
 import com.example.kotlinpcap.UI.WifiFragment
 

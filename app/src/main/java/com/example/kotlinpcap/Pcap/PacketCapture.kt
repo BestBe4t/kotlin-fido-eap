@@ -1,5 +1,6 @@
 package com.example.kotlinpcap.Pcap
 
+import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import org.jnetpcap.Pcap
@@ -12,7 +13,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 @Suppress("ConvertToStringTemplate")
-class PacketCapture {
+class PacketCapture() {
     init {
         try {
             System.loadLibrary(File("jnetpcap.dll").absolutePath)
@@ -28,7 +29,7 @@ class PacketCapture {
         var time_out = 10*1000
     }
 
-    fun main(): String{
+    fun packet_capter(): String{
         var alldevs:List<PcapIf> = ArrayList<PcapIf>()
         val errbuf:StringBuilder = StringBuilder()
         val r = Pcap.findAllDevs(alldevs, errbuf)

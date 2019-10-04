@@ -37,6 +37,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation fileTree(dir: 'C:\\Users\\DUCKBEAT\\AndroidStudioProjects\\hello-jni-kotlinApp\\jnetpcap-1.4.r1425-1.win64\\jnetpcap-1.4.r1425', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'androidx.fragment:fragment-ktx:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     def lifecycle_version = '2.1.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"

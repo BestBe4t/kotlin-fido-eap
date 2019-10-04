@@ -42,6 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:background="#73B9FF"
             tools:text="Welcome, John!" />
 
         <EditText
@@ -72,17 +73,6 @@
             android:hint="@string/password" />
 
         <TextView
-            android:id="@+id/explanation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_large"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:layout_marginEnd="@dimen/spacing_large"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_password" />
-
-        <TextView
             android:id="@+id/error"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -93,10 +83,10 @@
             android:textColor="?attr/colorError"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/explanation"
+            app:layout_constraintTop_toBottomOf="@id/input_password"
             tools:text="This shows an error." />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
