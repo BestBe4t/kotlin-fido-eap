@@ -14,37 +14,72 @@
  * limitations under the License.
  */
 
-package com.example.kotlinpcap.Wifi
+package com.example.Kotlinpcap.ShareResource
 
 import android.content.SharedPreferences
 import androidx.lifecycle.LiveData
 
 fun SharedPreferences.liveString(key: String, defaultValue: String): LiveData<String?> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getString)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getString
+    )
 }
 
 fun SharedPreferences.liveString(key: String): LiveData<String?> {
-    return SharedPreferenceLiveData(this, key, null, SharedPreferences::getString)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        null,
+        SharedPreferences::getString
+    )
 }
 
 fun SharedPreferences.liveInt(key: String, defaultValue: Int): LiveData<Int> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getInt)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getInt
+    )
 }
 
 fun SharedPreferences.liveBoolean(key: String, defaultValue: Boolean): LiveData<Boolean> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getBoolean)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getBoolean
+    )
 }
 
 fun SharedPreferences.liveFloat(key: String, defaultValue: Float): LiveData<Float> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getFloat)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getFloat
+    )
 }
 
 fun SharedPreferences.liveLong(key: String, defaultValue: Long): LiveData<Long> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getLong)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getLong
+    )
 }
 
 fun SharedPreferences.liveStringSet(key: String, defaultValue: Set<String>): LiveData<Set<String>?> {
-    return SharedPreferenceLiveData(this, key, defaultValue, SharedPreferences::getStringSet)
+    return SharedPreferenceLiveData(
+        this,
+        key,
+        defaultValue,
+        SharedPreferences::getStringSet
+    )
 }
 
 internal class SharedPreferenceLiveData<T>(

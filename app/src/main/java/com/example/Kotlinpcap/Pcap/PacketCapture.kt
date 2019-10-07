@@ -1,8 +1,6 @@
-package com.example.kotlinpcap.Pcap
+package com.example.Kotlinpcap.Pcap
 
-import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import org.jnetpcap.Pcap
 import org.jnetpcap.PcapIf
 import org.jnetpcap.packet.PcapPacket

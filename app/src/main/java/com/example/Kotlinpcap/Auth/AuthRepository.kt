@@ -1,8 +1,11 @@
-package com.example.kotlinpcap.Auth
+package com.example.Kotlinpcap.Auth
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.Kotlinpcap.Database.DatabaseOpenHelper
+import com.example.Kotlinpcap.ShareResource.State
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
@@ -28,11 +31,12 @@ class AuthRepository(
         }
     }
 
+    private val DBHelper = DatabaseOpenHelper
     private val StateListeners = mutableListOf<(State) -> Unit>()
 
     fun getState():LiveData<State>{
         return object : LiveData<State>(){
-            private val listener = {state: State->
+            private val listener = {state: State ->
                 postValue(state)
             }
 
@@ -54,6 +58,16 @@ class AuthRepository(
 
             override fun onInactive() {
                 StateListeners.remove(listener)
+            }
+        }
+    }
+
+    fun Login(userName: String, userPassword: String, sending: MutableLiveData<Boolean>){
+        executor.execute{
+            sending.postValue(true)
+            try{
+            }finally {
+                sending.postValue(false)
             }
         }
     }

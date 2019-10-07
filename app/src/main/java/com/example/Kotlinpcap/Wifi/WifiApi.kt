@@ -1,12 +1,8 @@
-package com.example.kotlinpcap.Wifi
+package com.example.Kotlinpcap.Wifi
 
-import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.content.SharedPreferences
 import android.net.wifi.WifiConfiguration
-import android.net.wifi.WifiManager
 
 class WifiApi(context: Context){
     private val context = context.applicationContext

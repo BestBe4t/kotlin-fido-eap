@@ -1,4 +1,4 @@
-package com.example.kotlinpcap.UI
+package com.example.Kotlinpcap.UI.Fragment
 
 import android.content.Context
 import android.net.wifi.ScanResult
@@ -10,10 +10,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.example.kotlinpcap.ViewModel.WifiViewmodel
-import com.example.kotlinpcap.Wifi.WifiAdapter
-import com.example.kotlinpcap.Wifi.WifiAdapterConnectFragment
-import com.example.kotlinpcap.databinding.WifiFragmentBinding
+import com.example.Kotlinpcap.UI.ViewModel.WifiViewmodel
+import com.example.Kotlinpcap.Wifi.WifiAdapter
+import com.example.Kotlinpcap.databinding.WifiFragmentBinding
 
 class WifiFragment:Fragment(), WifiAdapterConnectFragment.Listener {
     companion object{
@@ -41,7 +40,9 @@ class WifiFragment:Fragment(), WifiAdapterConnectFragment.Listener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         wifiAdapter = WifiAdapter{SSID ->
-            WifiAdapterConnectFragment.newInstance(SSID).show(childFragmentManager, FRAGMENT_WIFI_CONNECT)
+            WifiAdapterConnectFragment.newInstance(SSID).show(childFragmentManager,
+                FRAGMENT_WIFI_CONNECT
+            )
             viewModel
 
         }

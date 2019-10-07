@@ -1,4 +1,4 @@
-package com.example.kotlinpcap.Wifi
+package com.example.Kotlinpcap.Wifi
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -7,7 +7,8 @@ import android.net.wifi.WifiConfiguration
 import androidx.core.content.edit
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.example.kotlinpcap.Auth.State
+import com.example.Kotlinpcap.ShareResource.State
+import com.example.Kotlinpcap.ShareResource.liveStringSet
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
@@ -134,18 +135,6 @@ class WifiRepository (
             prefs.edit(commit = true){
                 remove(PREF_WIFILIST)
             }
-        }
-    }
-
-    fun back(){
-        executor.execute {
-            val username = prefs.getString(PREF_USERNAME, null)!!
-            prefs.edit(commit = true) {
-                remove(PREF_TOKEN)
-                remove(PREF_CREDENTIALS)
-                remove(PREF_WIFILIST)
-            }
-            invokeStateListeners(State.SigningIn(username))
         }
     }
 }

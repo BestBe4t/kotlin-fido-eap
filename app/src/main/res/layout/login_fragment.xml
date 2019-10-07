@@ -23,7 +23,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.kotlinpcap.ViewModel.LoginViewmodel" />
+            type="com.example.Kotlinpcap.UI.ViewModel.LoginViewmodel" />
 
     </data>
 
@@ -91,23 +91,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_medium_large"
-            android:enabled="@{safeUnbox(viewModel.signInEnabled)}"
-            android:onClick="@{() -> viewModel.login()}"
+            android:enabled="@{safeUnbox(viewModel.nextEnabled)}"
+            android:onClick="@{() -> viewModel.Login()}"
             android:text="@string/Log_in"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
-        <androidx.core.widget.ContentLoadingProgressBar
-            android:id="@+id/processing"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

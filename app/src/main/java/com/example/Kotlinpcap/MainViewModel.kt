@@ -1,8 +1,8 @@
-package com.example.kotlinpcap
+package com.example.Kotlinpcap
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import com.example.kotlinpcap.Auth.AuthRepository
+import com.example.Kotlinpcap.Auth.AuthRepository
 
 class MainViewModel(application: Application) : AndroidViewModel(application){
 

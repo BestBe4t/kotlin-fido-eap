@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.kotlinpcap.ViewModel.WifiViewmodel" />
+            type="com.example.Kotlinpcap.ViewModel.WifiViewmodel" />
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/home"

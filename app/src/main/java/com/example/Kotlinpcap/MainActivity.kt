@@ -1,4 +1,4 @@
-package com.example.kotlinpcap
+package com.example.Kotlinpcap
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.kotlinpcap.Auth.State
-import com.example.kotlinpcap.UI.LoginFragment
-import com.example.kotlinpcap.UI.WifiFragment
+import com.example.Kotlinpcap.ShareResource.State
+import com.example.Kotlinpcap.UI.Fragment.LoginFragment
+import com.example.Kotlinpcap.UI.Fragment.WifiFragment
 
 class MainActivity : AppCompatActivity() {
 

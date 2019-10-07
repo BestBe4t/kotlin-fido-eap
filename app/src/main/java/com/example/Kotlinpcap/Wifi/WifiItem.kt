@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.kotlinpcap.Wifi
+package com.example.Kotlinpcap.Wifi
 
 /**
  * A credential registered on the server.

@@ -1,4 +1,4 @@
-package com.example.kotlinpcap
+package com.example.Kotlinpcap
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

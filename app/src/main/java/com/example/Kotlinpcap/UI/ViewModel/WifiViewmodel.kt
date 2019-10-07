@@ -1,4 +1,4 @@
-package com.example.kotlinpcap.ViewModel
+package com.example.Kotlinpcap.UI.ViewModel
 
 import android.app.Application
 import android.net.wifi.ScanResult
@@ -6,8 +6,8 @@ import android.net.wifi.WifiConfiguration
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.example.kotlinpcap.Auth.State
-import com.example.kotlinpcap.Wifi.WifiRepository
+import com.example.Kotlinpcap.ShareResource.State
+import com.example.Kotlinpcap.Wifi.WifiRepository
 
 class WifiViewmodel(application: Application): AndroidViewModel(application){
     private val wifiRepository = WifiRepository.getInstance(application.applicationContext)

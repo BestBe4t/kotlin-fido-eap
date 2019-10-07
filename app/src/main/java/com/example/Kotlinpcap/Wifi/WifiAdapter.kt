@@ -1,12 +1,11 @@
-package com.example.kotlinpcap.Wifi
+package com.example.Kotlinpcap.Wifi
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kotlinpcap.Wifi.WifiItem
-import com.example.kotlinpcap.databinding.WifiItemBinding
+import com.example.Kotlinpcap.databinding.WifiItemBinding
 
 class WifiAdapter(
         private val onWifiClicked: (String) -> Unit

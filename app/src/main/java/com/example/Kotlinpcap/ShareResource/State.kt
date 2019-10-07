@@ -1,4 +1,4 @@
-package com.example.kotlinpcap.Auth
+package com.example.Kotlinpcap.ShareResource
 
 sealed class State{
     object SignedOut : State()
