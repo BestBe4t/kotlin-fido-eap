@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/jnetpcap" />
+            <option value="$PROJECT_DIR$/jnetstream-3.0a1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

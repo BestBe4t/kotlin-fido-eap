@@ -23,7 +23,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.Kotlinpcap.UI.ViewModel.LoginViewmodel" />
+            type="com.example.kotlinpcap.UI.ViewModel.LoginViewmodel" />
 
     </data>
 

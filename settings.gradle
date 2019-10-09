@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':jnetpcap', ':jnetstream-3.0a1'
 rootProject.name='Kotlin Pcap'

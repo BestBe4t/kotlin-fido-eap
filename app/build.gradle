@@ -27,15 +27,14 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation fileTree(dir: 'C:\\Users\\DUCKBEAT\\AndroidStudioProjects\\hello-jni-kotlinApp\\jnetpcap-1.4.r1425-1.win64\\jnetpcap-1.4.r1425', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'androidx.fragment:fragment-ktx:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
@@ -47,4 +46,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+    implementation files('libs/jnetstream-3.0a1.jar')
 }
